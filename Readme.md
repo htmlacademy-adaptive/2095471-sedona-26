@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Alexey Shulick](https://up.htmlacademy.ru/adaptive/26/user/2095471).
-* Наставник: `Неизвестно`.
+* Наставник: [Татьяна Симоненко](https://htmlacademy.ru/profile/tatien).
 
 ---
 
