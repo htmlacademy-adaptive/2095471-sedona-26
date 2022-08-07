@@ -8,14 +8,11 @@
   <body class="page__body">
 
     <header class="main-header">
-      <a class="main-header__logo">
-        <img src="#" alt="Город Седона">
-      </a>
       <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="botton">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
         <div class="main-navigation__wrapper">
+          <button class="main-navigation__toggle" type="botton">
+            <span class="visually-hidden">Закрыть меню</span>
+          </button>
           <ul class="main-navigation__list site-list">
             <li class="site-list__item site-list__item--current">
               <a>Главная</a>
@@ -32,6 +29,14 @@
           </ul>
         </div>
       </nav>
+      <div class="main-header__menu">
+        <a class="main-header__logo">
+          <img src="/source/img/logo.svg" width="185" height="96" alt="Город Седона">
+        </a>
+        <button class="main-header__toggle" type="botton">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </div>
       <div class="hero">
         <img class="hero__text-sedona" src="/source/img/text-sedona.svg" width="282" height="214" alt="Промо текст Седоны">
       </div>
