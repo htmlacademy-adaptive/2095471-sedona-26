@@ -3,38 +3,44 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Седона</title>
 </head>
 
 <body class="page__body">
 
   <header class="main-header">
-    <a class="main-header__logo">
-      <img src="#" alt="Город Седона">
-    </a>
     <nav class="main-navigation">
       <button class="main-navigation__toggle" type="botton">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Закрыть меню</span>
       </button>
       <div class="main-navigation__wrapper">
         <ul class="main-navigation__list site-list">
           <li class="site-list__item">
-            <a href="index.html">Главная</a>
+            <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="catalog.html">Фото и видео</a>
+            <a class="site-list__link" href="catalog.html">Фото и видео</a>
           </li>
           <li class="site-list__item site-list__item--current">
             <a>Форма отзыва</a>
           </li>
           <li class="site-list__item">
-            <a href="https://htmlacademy.ru">Htmlacademy</a>
+            <a class="site-list__link" href="https://htmlacademy.ru">Htmlacademy</a>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="promo promo--inner">
-      <img class="promo__text-sedona" src="#" alt="Седона">
+    <div class="main-header__menu">
+      <a class="main-header__logo">
+        <img src="/source/img/logo.svg" width="185" height="96" alt="Город Седона">
+      </a>
+      <button class="main-header__toggle" type="botton">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
+    <div class="hero hero--inner">
+      <img class="hero__text-sedona" src="./img/logo-sedona.svg" width="229" height="39" alt="Седона">
     </div>
   </header>
 
@@ -80,19 +86,19 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend form__legend--impression">Ваше общее впечатление:</legend>
             <div class="form__container form__container--select">
-              <input class="form__select" type="radio" id="positive" name="impression" value="positive" checked>
+              <input class="form__select-radio" type="radio" id="positive" name="impression" value="positive" checked>
               <label class="form__label" for="positive">
                 <span class="form__select-text">Скорее положительное</span>
               </label>
             </div>
             <div class="form__container form__container--select">
-              <input class="form__select" type="radio" id="negative" name="impression" value="negative">
+              <input class="form__select-radio" type="radio" id="negative" name="impression" value="negative">
               <label class="form__label" for="negative">
                 <span class="form__select-text">Скорее отрицательное</span>
               </label>
             </div>
             <div class="form__container form__container--select">
-              <input class="form__select" type="radio" id="indefinitely" name="impression" value="indefinitely">
+              <input class="form__select-radio" type="radio" id="indefinitely" name="impression" value="indefinitely">
               <label class="form__label" for="indefinitely">
                 <span class="form__select-text">Затрудняюсь ответить</span>
               </label>
@@ -103,25 +109,25 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend form__legend--places-visited">Посещенные достопримечательности:</legend>
             <div class="form__container form__container--places-visited">
-              <input class="form__select-places" type="checkbox" id="bridge" name="checkbox" checked>
+              <input class="form__select-checkbox" type="checkbox" id="bridge" name="checkbox" checked>
               <label class="form__label" for="bridge">
                 <span class="form__select-text">Мост дьявола</span>
               </label>
             </div>
             <div class="form__container form__container--places-visited">
-              <input class="form__select-places" type="checkbox" id="mountain" name="checkbox" checked>
+              <input class="form__select-checkbox" type="checkbox" id="mountain" name="checkbox" checked>
               <label class="form__label" for="mountain">
                 <span class="form__select-text">Гора-Колокол</span>
               </label>
             </div>
             <div class="form__container form__container--places-visited">
-              <input class="form__select-places" type="checkbox" id="park" name="checkbox" checked>
+              <input class="form__select-checkbox" type="checkbox" id="park" name="checkbox" checked>
               <label class="form__label" for="park">
                 <span class="form__select-text">Слайд-парк</span>
               </label>
             </div>
             <div class="form__container form__container--places-visited">
-              <input class="form__select-places" type="checkbox" id="rocks" name="checkbox">
+              <input class="form__select-checkbox" type="checkbox" id="rocks" name="checkbox">
               <label class="form__label" for="rocks">
                 <span class="form__select-text">Красные скалы</span>
               </label>
@@ -140,6 +146,7 @@
             <span class="button__text">Отправить отзыв</span>
           </button>
         </div>
+        <p class="form__remind-text">* — обязательные поля</p>
       </form>
     </section>
   </main>
