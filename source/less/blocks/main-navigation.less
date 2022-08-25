@@ -1,6 +1,6 @@
 .main-navigation {
   font-weight: @title-font-weight;
-  font-size: @title-font-size;
+  font-size: @title-font-size-mobile;
   line-height: @title-line-height;
   text-transform: uppercase;
 }
@@ -12,4 +12,18 @@
 .main-navigation__list {
   padding: 0;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation__wrapper {
+    width: 693px;
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-navigation__wrapper {
+    width: 1200px;
+  }
 }

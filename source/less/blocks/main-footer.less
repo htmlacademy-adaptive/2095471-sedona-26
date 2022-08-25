@@ -9,3 +9,19 @@
   color: @dark-color;
   text-decoration: none;
 }
+
+
+@media (min-width: @tablet-width) {
+    .main-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer__wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+}

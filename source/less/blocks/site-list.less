@@ -13,3 +13,26 @@
   text-decoration: none;
   color: inherit;
 }
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+  }
+
+  .site-list__item {
+    background-color: @light-color;
+    color: @dark-color;
+    border: none;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    width: 1060px;
+    margin: 0 auto;
+  }
+}

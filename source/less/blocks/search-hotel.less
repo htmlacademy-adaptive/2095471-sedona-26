@@ -20,9 +20,24 @@
   color: @light-color;
   padding: 16px 49px 16px 49px;
   text-transform: uppercase;
-  font-family: 'PT Sans';
+  font-family: @font-family;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .search-hotel__container {
+    width: 458px;
+    margin: 0 auto;
+  }
+
+  .search-hotel__button {
+    width: 458px;
+  }
+
+  .search-hotel__title {
+    font-size: 30px;
+  }
 }
