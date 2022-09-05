@@ -30,9 +30,61 @@
 }
 
 .form__container {
-
   margin-bottom: 16px;
   width: 280px;
+}
+
+.form__container--select {
+  margin-bottom: 36px;
+}
+
+.form__container--places-visited {
+  margin-bottom: 36px;
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__control-mark {
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  top: -14px;
+  left: 0px;
+  background-color: #f2f2f2;
+}
+
+.form__control-mark--radio {
+  border-radius: 50%;
+}
+
+.form__select-radio:checked+.form__control-mark::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+}
+
+.form__label:hover .form__control-mark {
+  background-color: #E7E5E5;
+}
+
+.form__select-checkbox {
+  position: relative;
+}
+
+.form__select-checkbox[type="checkbox"]:checked+.form__control-mark--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  background: url('../img/icons/tick.svg');
+  background-repeat: no-repeat;
 }
 
 .form__container--fullname {
@@ -53,6 +105,7 @@
   font-size: @title-font-size-mobile;
   line-height: @title-line-height;
   color: @dark-color;
+  padding-left: 16px;
 }
 
 .form__input--textarea {

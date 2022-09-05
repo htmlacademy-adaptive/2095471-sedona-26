@@ -5,8 +5,19 @@
   text-transform: uppercase;
 }
 
+@media (max-width: @mobile-width-only) {
+  .main-navigation {
+    position: absolute;
+    top: 0;
+    width: 320px;
+
+  }
+}
+
 .main-navigation__toggle {
+  
   display: none;
+
 }
 
 .main-navigation__list {
