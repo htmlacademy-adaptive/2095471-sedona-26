@@ -40,6 +40,10 @@
     margin: 0 auto;
   }
 
+  .reasons__decor {
+    display: none;
+  }
+
   .reasons__item--blue {
     display: flex;
     justify-content: space-between;
@@ -73,6 +77,12 @@
 }
 
 @media (max-width: @mobile-width-only) {
+  .reasons__decor {
+    position: absolute;
+    left: 0px;
+    top: -20px;
+  }
+
   .reasons__item {
     position: relative;
   }
@@ -106,5 +116,9 @@
 
   .reasons__picture {
     width: 800px;
+  }
+
+  .reasons__decor {
+    display: none;
   }
 }
