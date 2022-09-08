@@ -1,3 +1,32 @@
 .likes__count {
   font-weight: 700;
 }
+
+.likes__like-button {
+  border: none;
+  background-color: transparent;
+}
+
+.likes__like-icon {
+  fill: #000;
+  fill-opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .likes--land {
+    padding-right: 20px;
+  }
+
+  .photo-item__likes {
+    display: flex;
+    width: 70px;
+    align-items: center;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .likes__like-icon {
+    fill: rgba(255, 255, 255, 1);
+    fill-opacity: 1;
+  }
+}

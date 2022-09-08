@@ -16,7 +16,6 @@
   text-align: left;
 }
 
-
 @media (min-width: @tablet-width) {
   .photo-item__image-land {
     width: 648px;
@@ -28,6 +27,21 @@
     height: 267px;
   }
 
+  .photo-item__sign {
+    display: flex;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+  }
+
+  .photo-item__sign--road {
+    background-color: #eaeaea;
+  }
+
+  .photo-item__likes {
+    padding: 0px;
+    text-align: left;
+  }
+
   .catalog-video__preview {
     width: 648px;
     height: 500px;
@@ -35,6 +49,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo-item__wrapper {
+    position: relative;
+  }
+
   .photo-item__image-places {
     width: 400px;
     height: 267px;
@@ -43,6 +61,16 @@
   .photo-item__image-land {
     width: 1200px;
     height: 400px;
+  }
+
+  .photo-item__sign {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #ffffff;
   }
 
   .catalog-video__preview {

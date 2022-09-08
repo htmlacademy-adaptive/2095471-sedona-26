@@ -3,13 +3,19 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Седона</title>
 </head>
 
 <body class="page__body">
   <header class="main-header">
-    <nav class="main-navigation">
+    <div class="main-header__menu">
+      <a class="main-header__logo">
+        <img src="./img/logo.svg" width="185" height="96" alt="Город Седона">
+      </a>
+    </div>
+    <nav class="main-navigation main-navigation--opened main-navigation--nojs">
       <button class="main-navigation__toggle" type="botton">
         <span class="visually-hidden">Закрыть меню</span>
       </button>
@@ -30,14 +36,6 @@
         </ul>
       </div>
     </nav>
-    <div class="main-header__menu">
-      <a class="main-header__logo">
-        <img src="./img/logo.svg" width="185" height="96" alt="Город Седона">
-      </a>
-      <button class="main-header__toggle" type="botton">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-    </div>
     <div class="hero hero--inner">
       <img class="hero__text-sedona" src="./img/logo-sedona.svg" width="229" height="39" alt="Седона">
     </div>
@@ -74,11 +72,15 @@
               <legend class="form__legend">Контактная информация:</legend>
               <label class="form__label" for="phone">Контактный телефон:</label>
               <div class="form__container form__container--phone">
-                <input class="form__input" type="text" name="phone" id="phone" placeholder="Введите телефон" required>
+                <input class="form__input form__input--phone" type="text" name="phone" id="phone" placeholder="Введите телефон" required>
+                <svg class="form__container--phone-icon" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#E6E6E6" d="M0 0h58v58H0z"/><path d="M23.6 27.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V37c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="#010101"/></svg>
+                <span class="form__icon form__icon--phone"></span>
               </div>
               <label class="form__label" for="e-mail">Электронная почта:</label>
               <div class="form__container form__container--e-mail">
-                <input class="form__input" type="text" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
+                <input class="form__input form__input form__input--e-mail" type="text" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
+                <svg class="form__container--mail-icon" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#E6E6E6" d="M0 0h58v58H0z"/><path d="M29 31c-.3 0-.5-.1-1-.3L21 27v7c0 .5.5 1 1 1h14c.5 0 1-.5 1-1v-7l-7 3.7c-.5.2-.7.3-1 .3Zm7-8H22c-.5 0-1 .5-1 1v.8l8 4.2 8-4.2V24c0-.5-.5-1-1-1Z" fill="#000"/></svg>
+                <span class="form__icon form__icon--e-mail"></span>
               </div>
             </fieldset>
           </div>
@@ -87,20 +89,25 @@
           <fieldset class="form__fieldset form__fieldset--impression">
             <legend class="form__legend form__legend--impression">Ваше общее впечатление:</legend>
             <div class="form__container form__container--select">
-              <input class="form__select-radio" type="radio" id="positive" name="impression" value="positive" checked>
               <label class="form__label" for="positive">
+                <input class="form__select-radio" type="radio" id="positive" name="impression" value="positive" checked>
+
+                <span class="form__control-mark form__control-mark--radio"></span>
                 <span class="form__select-text">Скорее положительное</span>
               </label>
             </div>
             <div class="form__container form__container--select">
-              <input class="form__select-radio" type="radio" id="negative" name="impression" value="negative">
               <label class="form__label" for="negative">
+                <input class="form__select-radio" type="radio" id="negative" name="impression" value="negative">
+                <span class="form__control-mark form__control-mark--radio"></span>
+
                 <span class="form__select-text">Скорее отрицательное</span>
               </label>
             </div>
             <div class="form__container form__container--select">
-              <input class="form__select-radio" type="radio" id="indefinitely" name="impression" value="indefinitely">
               <label class="form__label" for="indefinitely">
+                <input class="form__select-radio" type="radio" id="indefinitely" name="impression" value="indefinitely">
+                <span class="form__control-mark form__control-mark--radio"></span>
                 <span class="form__select-text">Затрудняюсь ответить</span>
               </label>
             </div>
@@ -110,26 +117,30 @@
           <fieldset class="form__fieldset form__fieldset--places-visited">
             <legend class="form__legend form__legend--places-visited">Посещенные достопримечательности:</legend>
             <div class="form__container form__container--places-visited">
-              <input class="form__select-checkbox" type="checkbox" id="bridge" name="checkbox" checked>
               <label class="form__label" for="bridge">
+                <input class="form__select-checkbox" type="checkbox" id="bridge" name="checkbox" checked>
+                <span class="form__control-mark form__control-mark--checkbox"></span>
                 <span class="form__select-text">Мост дьявола</span>
               </label>
             </div>
             <div class="form__container form__container--places-visited">
-              <input class="form__select-checkbox" type="checkbox" id="mountain" name="checkbox" checked>
               <label class="form__label" for="mountain">
+                <input class="form__select-checkbox" type="checkbox" id="mountain" name="checkbox" checked>
+                <span class="form__control-mark form__control-mark--checkbox"></span>
                 <span class="form__select-text">Гора-Колокол</span>
               </label>
             </div>
             <div class="form__container form__container--places-visited">
-              <input class="form__select-checkbox" type="checkbox" id="park" name="checkbox" checked>
               <label class="form__label" for="park">
+                <input class="form__select-checkbox" type="checkbox" id="park" name="checkbox" checked>
+                <span class="form__control-mark form__control-mark--checkbox"></span>
                 <span class="form__select-text">Слайд-парк</span>
               </label>
             </div>
             <div class="form__container form__container--places-visited">
-              <input class="form__select-checkbox" type="checkbox" id="rocks" name="checkbox">
               <label class="form__label" for="rocks">
+                <input class="form__select-checkbox" type="checkbox" id="rocks" name="checkbox">
+                <span class="form__control-mark form__control-mark--checkbox"></span>
                 <span class="form__select-text">Красные скалы</span>
               </label>
             </div>
@@ -162,16 +173,19 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link" href="#">
+              <svg class="social__button-icon" width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M23.45.95c.17-.55 0-.95-.8-.95h-2.62c-.67 0-.98.35-1.14.73 0 0-1.34 3.2-3.23 5.27-.61.6-.89.8-1.22.8-.17 0-.42-.2-.42-.74V.95c0-.66-.18-.95-.74-.95H9.15c-.42 0-.67.3-.67.6 0 .61.95.76 1.05 2.5v3.8c0 .84-.16.99-.5.99-.88 0-3.05-3.21-4.33-6.89-.25-.71-.5-1-1.17-1H.9C.15 0 0 .35 0 .73c0 .68.89 4.07 4.14 8.55C6.32 12.34 9.38 14 12.15 14c1.67 0 1.88-.37 1.88-1v-2.32c0-.73.16-.88.69-.88.38 0 1.05.2 2.61 1.67C19.11 13.22 19.4 14 20.41 14h2.62c.75 0 1.13-.37.91-1.1-.24-.72-1.09-1.77-2.21-3.02-.62-.7-1.54-1.47-1.81-1.86-.4-.49-.28-.7 0-1.14 0 0 3.2-4.43 3.53-5.93Z" fill="#fff"/></svg>
               <span class="visually-hidden">ВКонтакте</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#">
+              <svg class="social__button-icon" width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m21.44 1.62-3.17 14.95c-.24 1.05-.86 1.31-1.75.82l-4.83-3.56-2.33 2.24c-.25.26-.47.47-.97.47l.35-4.91 8.95-8.09c.39-.35-.09-.54-.6-.2L6.01 10.32 1.26 8.82C.22 8.5.21 7.8 1.48 7.3L20.1.11c.87-.32 1.62.2 1.34 1.51Z" fill="#fff"/></svg>
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="#">
+              <svg class="social__button-icon" width="24" height="24" viewBox="0 3 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.18 5H4.81C3.31 5 2 6.3 2 7.8v8.3C2 17.7 3.3 19 4.81 19h14.37A2.8 2.8 0 0 0 22 16.2V7.8c.1-1.5-1.2-2.8-2.8-2.8ZM9.03 15.4V8.6l6.84 3.4-6.84 3.4Z" fill="#fff"/></svg>
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
@@ -180,6 +194,7 @@
       <div class="html-logo">
         <a class="html-logo__link" href="https://htmlacademy.ru/intensive/adaptive">
           <p class="html-logo__text">Разработано</p>
+          <svg class="html-logo__icon" width="28" height="33" viewBox="0 0 28 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.15.25h-.1L.5 1.59v23.63l13.55 7.66 13.45-7.66V1.6L14.15.25ZM25.6 11.83l-11.54-6.5v-.1h-.1l-.1-.1v.1L2.4 11.83V3.22l11.54-1.15 11.64 1.15v8.6ZM13.95 6.76l11.54 6.4-4.51 2.5-7.13-4.02v1.33l5.92 3.35-.9.48-5.02-2.87v1.34l3.81 2.2-.8.48-3.01-1.72v1.34l1.9 1.05-1.8 1.05-11.44-6.4 11.44-6.51ZM2.41 14.7l11.44 6.5v.96l-7.93-4.5V19l8.03 4.6v1.05l-8.03-4.5v1.34l8.03 4.6 8.13-4.7v-4.97l3.41-1.91v9.56l-11.54 6.6-11.54-6.5V14.7Z" fill="#000"/></svg>
           <span class="visually-hidden">HTMLAcademy</span>
         </a>
       </div>
