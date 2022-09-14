@@ -1,10 +1,23 @@
+.main-header {
+  position: relative;
+}
+
 .main-header__menu {
   display: flex;
   justify-content: center;
   height: 56px;
 }
 
+@media (min-width: @tablet-width) {
+  .main-header__menu {
+    position: absolute;
+    left: 300px;
+  }
+}
 
-.main-header__menu {
-    position: relative;
+@media (min-width: @desktop-width) {
+  .main-header__menu {
+    position: absolute;
+    left: 510px;
+  }
 }
