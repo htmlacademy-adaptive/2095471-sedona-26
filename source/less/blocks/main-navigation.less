@@ -3,7 +3,20 @@
   font-size: @title-font-size-mobile;
   line-height: @title-line-height;
   text-transform: uppercase;
-  position: relative;
+
+}
+
+@media (max-width: @mobile-width-only) {
+.main-navigation--closed .site-list {
+  display: none;
+}
+
+.main-navigation--opened .site-list{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  }
 }
 
 .main-navigation__toggle {
@@ -15,7 +28,11 @@
   height: 55px;
   cursor: pointer;
   border: none;
-  background-color: @block-color;
+  background-color: transparent;
+}
+
+.main-navigation--nojs .main-navigation__toggle {
+  display:  none;
 }
 
 .main-navigation--closed .main-navigation__toggle::before {
