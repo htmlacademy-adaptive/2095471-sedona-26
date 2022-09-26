@@ -39,12 +39,12 @@
   </svg>
   <header class="main-header">
     <div class="main-header__menu">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="./img/icons/logo.svg" width="185" height="96" alt="Город Седона">
       </a>
     </div>
-    <nav class="main-navigation main-navigation--closed main-navigation--nojs">
-      <button class="main-navigation__toggle" type="botton">
+    <nav class="main-navigation main-navigation--opened main-navigation--nojs">
+      <button class="main-navigation__toggle" type="button">
         <span class="visually-hidden">Закрыть меню</span>
       </button>
       <div class="main-navigation__wrapper">
@@ -69,7 +69,7 @@
     </div>
   </header>
 
-  <main class="main-container main-container__form">
+  <main class="main-container">
     <h1 class="visually-hidden">Форма отзыва.</h1>
     <section class="feedback">
       <header class="feedback-header">
@@ -101,14 +101,12 @@
               <label class="form__label" for="phone">Контактный телефон:</label>
               <div class="form__container form__container--phone">
                 <input class="form__input form__input--phone" type="text" name="phone" id="phone" placeholder="Введите телефон" required>
-                <svg class="form__container--phone-icon" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#E6E6E6" d="M0 0h58v58H0z"/><path d="M23.6 27.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V37c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="#010101"/></svg>
-                <span class="form__icon form__icon--phone"></span>
+                <svg class="form__icon-phone" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#E6E6E6" d="M0 0h58v58H0z"/><path d="M23.6 27.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V37c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z" fill="#010101"/></svg>
               </div>
               <label class="form__label" for="e-mail">Электронная почта:</label>
               <div class="form__container form__container--e-mail">
                 <input class="form__input form__input form__input--e-mail" type="text" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
-                <svg class="form__container--mail-icon" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#E6E6E6" d="M0 0h58v58H0z"/><path d="M29 31c-.3 0-.5-.1-1-.3L21 27v7c0 .5.5 1 1 1h14c.5 0 1-.5 1-1v-7l-7 3.7c-.5.2-.7.3-1 .3Zm7-8H22c-.5 0-1 .5-1 1v.8l8 4.2 8-4.2V24c0-.5-.5-1-1-1Z" fill="#000"/></svg>
-                <span class="form__icon form__icon--e-mail"></span>
+                <svg class="form__icon-e-mail" width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill="#E6E6E6" d="M0 0h58v58H0z"/><path d="M29 31c-.3 0-.5-.1-1-.3L21 27v7c0 .5.5 1 1 1h14c.5 0 1-.5 1-1v-7l-7 3.7c-.5.2-.7.3-1 .3Zm7-8H22c-.5 0-1 .5-1 1v.8l8 4.2 8-4.2V24c0-.5-.5-1-1-1Z" fill="#000"/></svg>
               </div>
             </fieldset>
           </div>
@@ -119,7 +117,6 @@
             <div class="form__container form__container--select">
               <label class="form__label" for="positive">
                 <input class="form__select-radio" type="radio" id="positive" name="impression" value="positive" checked>
-
                 <span class="form__control-mark form__control-mark--radio"></span>
                 <span class="form__select-text">Скорее положительное</span>
               </label>
@@ -128,7 +125,6 @@
               <label class="form__label" for="negative">
                 <input class="form__select-radio" type="radio" id="negative" name="impression" value="negative">
                 <span class="form__control-mark form__control-mark--radio"></span>
-
                 <span class="form__select-text">Скорее отрицательное</span>
               </label>
             </div>
@@ -193,7 +189,7 @@
   </main>
 
   <footer class="main-footer">
-    <section class="main-footer__wrapper">
+    <div class="main-footer__wrapper">
       <div class="main-footer__hashtag-container">
         <a href="#" class="main-footer__hashtag">#visitsedona</a>
       </div>
@@ -234,7 +230,28 @@
           <span class="visually-hidden">HTMLAcademy</span>
         </a>
       </div>
+    </div>
   </footer>
+  <div class="modal__container-wrong modal__container-wrong--close">
+    <div class="modal__order">
+      <section class="modal__content modal__content--wrong">
+        <h2 class="modal__title modal__title--wrong">что-то пошло не так!</h2>
+        <p class="modal__description modal__description--wrong">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="modal__close-button modal__close-button--wrong" type="button">Ok</button>
+      </section>
+    </div>
+  </div>
+  <div class="modal__container-success modal__container-success--close">
+    <div class="modal__order modal__order--success">
+      <section class="modal__content modal__content--success">
+        <h2 class="modal__title modal__title--success">Ваш отзыв отправлен!</h2>
+        <p class="modal__description modal__description--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.</p>
+      </section>
+      <div class="modal__button-container">
+        <button class="modal__close-button modal__close-button--success" type="button">Закрыть окно</button>
+      </div>
+    </div>
+  </div>
   <script src="./js/script.js"></script>
 </body>
 

@@ -39,12 +39,12 @@
   </svg>
   <header class="main-header">
     <div class="main-header__menu">
-      <a class="main-header__logo">
+      <a class="main-header__logo" href="index.html">
         <img src="./img/icons/logo.svg" width="185" height="96" alt="Город Седона">
       </a>
     </div>
-    <nav class="main-navigation main-navigation--closed main-navigation--nojs">
-      <button class="main-navigation__toggle" type="botton">
+    <nav class="main-navigation main-navigation--opened main-navigation--nojs">
+      <button class="main-navigation__toggle" type="button">
         <span class="visually-hidden">Закрыть меню</span>
       </button>
       <div class="main-navigation__wrapper">
@@ -129,7 +129,7 @@
               <picture>
                 <source media="(min-width: 1200px)" srcset="./img/desktop/forest-desktop.jpg 1x, ./img/desktop/forest-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="./img/tablet/forest-tablet.jpg 1x, ./img/tablet/forest-tablet@2x.jpg 2x">
-                <img class="photo-item__image-places" src="./img/mobile/forest-mobile.jpg" srcset="./img/mobile/forest-mobile@2x.jpg 2x" width="" height="" alt="Дорога на север">
+                <img class="photo-item__image-places" src="./img/mobile/forest-mobile.jpg" srcset="./img/mobile/forest-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога на север">
               </picture>
             </a>
             <section class="photo-item__sign photo-item__sign--road">
@@ -152,7 +152,7 @@
               <picture>
                 <source media="(min-width: 1200px)" srcset="./img/desktop/devil-bridge-desktop.jpg 1x, ./img/desktop/devil-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="./img/tablet/devil-bridge-tablet.jpg 1x, ./img/tablet/devil-bridge-tablet@2x.jpg 2x">
-                <img class="photo-item__image-places" src="./img/mobile/devil-bridge-mobile.jpg" srcset="./img/mobile/devil-bridge-mobile@2x.jpg 2x" width="" height="" alt="Мост дьявола">
+                <img class="photo-item__image-places" src="./img/mobile/devil-bridge-mobile.jpg" srcset="./img/mobile/devil-bridge-mobile@2x.jpg 2x" width="280" height="280" alt="Мост дьявола">
               </picture>
             </a>
             <section class="photo-item__sign">
@@ -188,7 +188,7 @@
   </main>
 
   <footer class="main-footer">
-    <section class="main-footer__wrapper">
+    <div class="main-footer__wrapper">
       <div class="main-footer__hashtag-container">
         <a href="#" class="main-footer__hashtag">#visitsedona</a>
       </div>
@@ -229,6 +229,7 @@
           <span class="visually-hidden">HTMLAcademy</span>
         </a>
       </div>
+    </div>
   </footer>
   <script src="./js/script.js"></script>
 </body>
